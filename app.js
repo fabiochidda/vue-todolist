@@ -4,6 +4,7 @@ const app = new Vue ({
     data: {
         titolo: "To Do List",
         done: false,
+        newToDo: "",
         toDoList: [
             {
                 text: "Finire questo esercizio",
@@ -23,6 +24,21 @@ const app = new Vue ({
     methods: {
         toggle () {
             this.done = !this.done
+        },
+
+        addNewToDo: function() {
+
+            if (this.newToDo !== "") {
+
+                this.toDoList.push({text: this.newToDo, done: true})
+
+            } else {
+
+                alert("Inserisci del testo prima di aggiungere una task")
+
+            }
+
+            this.newToDo = ""
         }
     }
 
