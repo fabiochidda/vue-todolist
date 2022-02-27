@@ -39,8 +39,13 @@ const app = new Vue ({
             }
 
             this.newToDo = ""
+        },
+
+        deleteList: function() {
+
+            this.toDoList.pop()
+            
         }
     }
-
 
 })

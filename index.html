@@ -25,14 +25,14 @@
             <div class="row justify-content-center align-items-center py-5">
                 <div class="col-auto">
                     <div class="ms_button_container px-3 mb-3">
-                        <input type="text" v-model="newToDo">
+                        <input type="text" v-model="newToDo" @keyup.enter="addNewToDo">
                         <input type="button" value="Aggiungi" @click="addNewToDo">
                     </div>
                     <div class="ms_list_container">
                         <ul class="ms_list p-2 m-0">
                             <li @click="toggle" class="d-flex justify-content-between align-items-center p-2 mb-3" v-for="(elements, i) in toDoList">
                                 <p class="m-0" :class="done == true ? 'ms_done' : '' ">{{elements.text}}</p>
-                                <i class="fa-solid fa-x"></i>
+                                <i class="fa-solid fa-x" @click="deleteList"></i>
                             </li>
                         </ul>
                     </div>
