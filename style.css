@@ -20,3 +20,7 @@ li {
 .fa-x {
     color: red;
 }
+
+.ms_done {
+    text-decoration: line-through;
+}
