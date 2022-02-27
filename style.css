@@ -1,0 +1,22 @@
+.ms_title {
+    background-color: lightgrey;
+    border-bottom: 2px solid grey;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.ms_list {
+    width: 500px;
+    text-align: center;
+}
+
+li {
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.fa-x {
+    color: red;
+}
